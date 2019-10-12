@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class TempConvt
+{
+	static double temp(double tcel)
+		{
+			return (tcel*1.8+32);
+		}
+	static double weight(double wpound)
+		{
+			return (wpound*0.4536);
+		}
+	public static void main(String[] args)
+	{
+		double tc=0.0,tf=0.0,wp=0.0,wk=0.0;
+		int ch=0,ts=0;
+	 
+		do
+		{ System.out.println("\nConvert as per choice: \n1.Temp Celcius to Fahrenheit\n2.Pounds to KG\n3.Seconds to time\n");
+			Scanner s=new Scanner(System.in);
+			ch = s.nextInt();
+			switch(ch)
+			{
+				case 1: System.out.println("\nEnter Temp in celcius: ");
+					tc=s.nextDouble();
+						System.out.println("\nTemp in Fahrenheit: "+temp(tc));
+				       break;
+				case 2: System.out.println("\nEnter Weight in pounds: ");
+					wp=s.nextDouble();
+						System.out.println("\nWeight in KG: "+weight(wp));
+				       break;
+			}
+
+	
+		}while(ch!=4);
+		
+	}
+
+}
